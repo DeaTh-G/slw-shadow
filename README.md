@@ -1,7 +1,7 @@
 <div align="center">
 	<h1>Sonic Lost World Shadow the Hedgehog Source Code</h1>
 	<br/>
-The source code of my contribution to [GPF](https://github.com/gpf-sct)'s Shadow the Hedgehog mod for Sonic Lost World.
+	The source code of my contribution to <a href="https://github.com/gpf-sct">GPF</a>'s Shadow the Hedgehog mod for Sonic Lost World.
 </div>
 
 # Releases
