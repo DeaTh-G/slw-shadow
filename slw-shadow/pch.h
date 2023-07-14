@@ -10,6 +10,7 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 #include "LostCodeLoader.h"
+#include "ModLoader.h"
 #include <Dependencies/Eigen/Geometry>
 #include "Sonic2013.h"
 

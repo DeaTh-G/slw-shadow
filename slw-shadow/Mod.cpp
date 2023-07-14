@@ -3,12 +3,18 @@
 using namespace app::Player;
 
 bool IsDLCRestorationOn = false;
+bool IsHE1ML = false;
+
+extern "C" _declspec(dllexport) void PreInit()
+{
+	IsHE1ML = true;
+}
 
 extern "C"
 {
-	void _declspec(dllexport) __cdecl Init(ModInfo* modInfo)
+	void _declspec(dllexport) __cdecl Init(ModInfo_t* modInfo)
 	{
-		IsDLCRestorationOn = GetModuleHandle(L"DLC-Restoration.dll");
+		IsDLCRestorationOn = GetModuleHandle(L"slw-dlc-restoration.dll");
 
 		std::string dir = modInfo->CurrentMod->Path;
 		dir = dir.substr(0, dir.length() - 7) + "disk\\sonic2013_patch_0\\";
@@ -82,10 +88,25 @@ extern "C"
 		}
 	}
 
-	void _declspec(dllexport) __cdecl PostInit(ModInfo* modInfo)
+	void _declspec(dllexport) __cdecl PostInit(ModInfo_t* modInfo)
 	{
-		if (!IsDLCRestorationOn && GetModuleHandle(L"DLC-Restoration.dll"))
-			if (*(int*)ASLR(0x00949330) != 0x81EC8B55)
-				app::WorldAreaMapInfo::InstallHooks();
+		auto* self = modInfo->CurrentMod;
+		auto* api = modInfo->API;
+
+		if (IsHE1ML)
+		{
+			auto* other = api->FindMod("5C335265");
+			if (other && self->Priority > other->Priority)
+			{
+				if (*(int*)ASLR(0x00949330) != 0x81EC8B55)
+					app::WorldAreaMapInfo::InstallHooks();
+			}
+		}
+		else
+		{
+			if (!IsDLCRestorationOn && GetModuleHandle(L"slw-dlc-restoration.dll"))
+				if (*(int*)ASLR(0x00949330) != 0x81EC8B55)
+					app::WorldAreaMapInfo::InstallHooks();
+		}
 	}
 }
