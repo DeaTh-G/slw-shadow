@@ -33,11 +33,14 @@ HOOK(void, __fastcall, CSonicUpdateHook, ASLR(0x00861CB0), app::Player::CSonic* 
     app::Player::CVisualGOC* visualGOC = (app::Player::CVisualGOC*)app::CGOCCollectionImpl::GetGOC((void*)(((int*)stateGOC)[22] + 0x32C), (char*)ASLR(0x00E01360));
     if (!visualGOC)
         return;
+
+    const char* animationName = stateGOC->GetCurrentAnimationName();
+    int currentState = stateGOC->GetCurrentState();
     std::string visualName = visualGOC->GetCurrentVisualName();
 
-    if (!app::Player::JetOnStates.contains(stateGOC->GetCurrentAnimationName()) ||
-        stateGOC->GetCurrentState() == 120 || stateGOC->GetCurrentState() == 13 ||
-        stateGOC->GetCurrentState() == 15 || visualName == "VisualSuperSonic")
+    if (!app::Player::JetOnStates.contains(animationName) ||
+        currentState == 120 || currentState == 13 ||  currentState == 15 ||
+        visualName == "VisualSuperSonic" || visualName == "CVisualSpin")
     {
         This->JetBoostersVisible(false);
     }
