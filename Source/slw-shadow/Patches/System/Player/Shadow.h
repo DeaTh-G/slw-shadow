@@ -2,7 +2,7 @@
 
 namespace slw_shadow::Player
 {
-	class CShadow : public app::Player::CSonic
+	class alignas(16) CShadow : public app::Player::CSonic
 	{
 	private:
 		inline static const size_t ms_JetBoosterEffectCount = 10;
