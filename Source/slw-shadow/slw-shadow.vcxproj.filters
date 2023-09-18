@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Patches">
+      <UniqueIdentifier>{3a9c60c6-9416-4db7-89ac-f80c5b708cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patches\System">
+      <UniqueIdentifier>{eae6aefe-4077-4220-89e0-0643903c605b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patches\System\Player">
+      <UniqueIdentifier>{62a4c562-4c38-48f1-9749-92357f1c120b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patches\xgame">
+      <UniqueIdentifier>{af5eb1f3-f2a2-44c8-88d4-474b81c58fd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patches\xgame\gamemode">
+      <UniqueIdentifier>{8ffcc17e-bf3b-41c6-88f1-207b6ca4a634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patches\xgame\gamemode\StartUp">
+      <UniqueIdentifier>{b0ea678e-e470-4d0a-92f3-1b59b11e8583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patches\xgame\gamemode\WorldAreaMap">
+      <UniqueIdentifier>{0eca5d1c-fc25-4b2a-9bf9-50de45a30ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patches\System\Player\Info">
+      <UniqueIdentifier>{aacf2f5b-9eaf-43a9-b578-c2645a106cad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="slw-shadow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\xgame\gamemode\StartUp\GameModeStartUp.h">
+      <Filter>Source Files\Patches\xgame\gamemode\StartUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\xgame\gamemode\WorldAreaMap\WorldAreaMapInfo.h">
+      <Filter>Source Files\Patches\xgame\gamemode\WorldAreaMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\System\Player\VisualHuman.h">
+      <Filter>Source Files\Patches\System\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\System\Player\Shadow.h">
+      <Filter>Source Files\Patches\System\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\System\Player\Info\PlayerVisualShadowLancelotInfo.h">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\System\Player\Info\PlayerVisualAndroidShadowInfo.h">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\System\Player\Info\PlayerVehicleGliderInfo.h">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches\System\Player\Glider.h">
+      <Filter>Source Files\Patches\System\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\xgame\gamemode\StartUp\GameModeStartUp.cpp">
+      <Filter>Source Files\Patches\xgame\gamemode\StartUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Shadow.cpp">
+      <Filter>Source Files\Patches\System\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\VisualHuman.cpp">
+      <Filter>Source Files\Patches\System\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Glider.cpp">
+      <Filter>Source Files\Patches\System\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\xgame\gamemode\WorldAreaMap\WorldAreaMapInfo.cpp">
+      <Filter>Source Files\Patches\xgame\gamemode\WorldAreaMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Info\PlayerVisualShadowLancelotInfo.cpp">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Info\PlayerVisualAndroidShadowInfo.cpp">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Info\PlayerVehicleGliderInfo.cpp">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
