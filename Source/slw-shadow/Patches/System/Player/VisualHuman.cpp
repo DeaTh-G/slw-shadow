@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "VisualHuman.h"
 
-void slw_shadow::Player::CVisualHuman::AnimationCallback(app::animation::CharactorAnimation* in_pAnimation, app::animation::ETriggerValueType in_triggerType, app::animation::CallbackParam in_param)
+void slw_shadow::Player::CVisualHuman::AnimCallBackStopSkateSound(app::animation::CharactorAnimation* in_pAnimation, app::animation::ETriggerValueType in_triggerType, app::animation::CallbackParam in_param)
 {
     auto* pAnimationName = static_cast<app::animation::CharactorAnimationSingle*>(in_pAnimation)->GetCurrentAnimationName();
     if (!ms_SkateStateNames.contains(pAnimationName))

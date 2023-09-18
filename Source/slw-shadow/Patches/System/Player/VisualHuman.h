@@ -13,7 +13,7 @@ namespace slw_shadow::Player
 		};
 
 	public:
-		void AnimationCallback(app::animation::CharactorAnimation* in_pAnimation, app::animation::ETriggerValueType in_triggerType, app::animation::CallbackParam in_param);
+		void AnimCallBackStopSkateSound(app::animation::CharactorAnimation* in_pAnimation, app::animation::ETriggerValueType in_triggerType, app::animation::CallbackParam in_param);
 		const std::unordered_set<std::string_view> GetSkateStateNames() const;
 		static void InstallHooks();
 	};
