@@ -3,7 +3,7 @@
 
 const std::unordered_set<std::string_view> slw_shadow::Player::CShadow::GetJetOnStateNames() const
 {
-    return std::unordered_set<std::string_view>();
+    return ms_JetOnStateNames;
 }
 
 void slw_shadow::Player::CShadow::CreateShadowJetBoosters()
@@ -12,17 +12,17 @@ void slw_shadow::Player::CShadow::CreateShadowJetBoosters()
 	if (!pEffectGoc)
 		return;
 
-	auto* pVisualGoc = GetComponent<app::fnd::GOCVisualModel>();
+	auto rpVisualGoc = GetPlayerGOC<app::Player::CVisualGOC>()->m_rpHumanVisual->pGocHolder->GetUnit(0).m_rpModel;
 
 	app::game::EffectCreateInfo effectInfo{};
 	effectInfo.m_pName = "ef_dl3_gossipstone_fire";
 	effectInfo.m_Unk1 = 1.0f;
 	effectInfo.m_Unk2 = 1;
 	effectInfo.m_Unk3 = true;
-	effectInfo.m_pVisual = pVisualGoc;
+	effectInfo.m_pVisual = rpVisualGoc.get();
 
 	app::math::Transform transform{};
-	pVisualGoc->GetNodeTransform(0, "Foot_L", &transform);
+	rpVisualGoc->GetNodeTransform(0, "Foot_L", &transform);
 	effectInfo.m_Rotation = { -transform.m_Rotation.x(), -transform.m_Rotation.y(), -transform.m_Rotation.z(), transform.m_Rotation.w() };
 
 	effectInfo.m_pBoneName = "Foot_L";
@@ -35,7 +35,7 @@ void slw_shadow::Player::CShadow::CreateShadowJetBoosters()
 	effectInfo.m_Position = csl::math::Vector3(1.2f, -0.06f, 0);
 	pEffectGoc->CreateEffectLoopEx(&JetBoosterEffects[1], effectInfo);
 
-	pVisualGoc->GetNodeTransform(0, "Toe_L", &transform);
+	rpVisualGoc->GetNodeTransform(0, "Toe_L", &transform);
 	Eigen::Quaternionf q{ transform.m_Rotation.w(), transform.m_Rotation.x(), transform.m_Rotation.y(), transform.m_Rotation.z() };
 	q = Eigen::AngleAxisf(0.5f * MATHF_PI, Eigen::Vector3f::UnitX()) * q;
 	effectInfo.m_Rotation = csl::math::Quaternion(q.y(), q.z(), q.w(), q.x());
@@ -56,7 +56,7 @@ void slw_shadow::Player::CShadow::CreateShadowJetBoosters()
 	effectInfo.m_Position = csl::math::Vector3(0.68f, 0.02f, 0);
 	pEffectGoc->CreateEffectLoopEx(&JetBoosterEffects[4], effectInfo);
 
-	pVisualGoc->GetNodeTransform(0, "Foot_R", &transform);
+	rpVisualGoc->GetNodeTransform(0, "Foot_R", &transform);
 	effectInfo.m_Rotation = { -transform.m_Rotation.x(), -transform.m_Rotation.y(), transform.m_Rotation.z(), -transform.m_Rotation.w() };
 
 	effectInfo.m_pBoneName = "Foot_R";
@@ -69,7 +69,7 @@ void slw_shadow::Player::CShadow::CreateShadowJetBoosters()
 	effectInfo.m_Position = csl::math::Vector3(1.2f, 0.06f, 0);
 	pEffectGoc->CreateEffectLoopEx(&JetBoosterEffects[6], effectInfo);
 
-	pVisualGoc->GetNodeTransform(0, "Toe_R", &transform);
+	rpVisualGoc->GetNodeTransform(0, "Toe_R", &transform);
 	q = { transform.m_Rotation.w(), transform.m_Rotation.x(), transform.m_Rotation.y(), transform.m_Rotation.z() };
 	q = Eigen::AngleAxisf(0.5f * MATHF_PI, Eigen::Vector3f::UnitX()) * q;
 	effectInfo.m_Rotation = csl::math::Quaternion(q.y(), q.z(), q.w(), q.x());
@@ -97,17 +97,17 @@ void slw_shadow::Player::CShadow::CreateLancelotJetBoosters()
 	if (!pEffectGoc)
 		return;
 	
-	auto* pVisualGoc = GetComponent<app::fnd::GOCVisualModel>();
+	auto rpVisualGoc = GetPlayerGOC<app::Player::CVisualGOC>()->m_rpHumanVisual->pGocHolder->GetUnit(0).m_rpModel;
 
 	app::game::EffectCreateInfo effectInfo{};
 	effectInfo.m_pName = "ef_dl3_gossipstone_fire";
 	effectInfo.m_Unk1 = 1.0f;
 	effectInfo.m_Unk2 = 1;
 	effectInfo.m_Unk3 = true;
-	effectInfo.m_pVisual = pVisualGoc;
+	effectInfo.m_pVisual = rpVisualGoc.get();
 
 	app::math::Transform transform{};
-	pVisualGoc->GetNodeTransform(0, "Foot_L", &transform);
+	rpVisualGoc->GetNodeTransform(0, "Foot_L", &transform);
 	effectInfo.m_Rotation = { -transform.m_Rotation.x(), -transform.m_Rotation.y(), -transform.m_Rotation.z(), transform.m_Rotation.w() };
 	
 	effectInfo.m_pBoneName = "Foot_L";
@@ -132,7 +132,7 @@ void slw_shadow::Player::CShadow::CreateLancelotJetBoosters()
 	effectInfo.m_Position = csl::math::Vector3(1, 0.02f, -2.3f);
 	pEffectGoc->CreateEffectLoopEx(&JetBoosterEffects[3], effectInfo);
 
-	pVisualGoc->GetNodeTransform(0, "Foot_R", &transform);
+	rpVisualGoc->GetNodeTransform(0, "Foot_R", &transform);
 	effectInfo.m_Rotation = { -transform.m_Rotation.x(), -transform.m_Rotation.y(), transform.m_Rotation.z(), -transform.m_Rotation.w() };
 	
 	effectInfo.m_pBoneName = "Foot_R";
@@ -184,15 +184,17 @@ HOOK(void, __fastcall, AddCallbackHook, ASLR(0x00861B00), slw_shadow::Player::CS
         in_pThis->JetBoosterEffects[i].SetGlobalScaling(0.05f);
 }
 
-HOOK(void, __fastcall, UpdateHook, ASLR(0x00861CB0), slw_shadow::Player::CShadow* in_pThis, void* edx, const app::fnd::SUpdateInfo& in_rUpdateInfo)
+HOOK(void, __fastcall, UpdateHook, ASLR(0x00861CB0), app::fnd::CActor* in_pThis, void* edx, const app::fnd::SUpdateInfo& in_rUpdateInfo)
 {
-    originalUpdateHook(in_pThis, edx, in_rUpdateInfo);
+	originalUpdateHook(in_pThis, edx, in_rUpdateInfo);
+	
+	auto* pThis = static_cast<slw_shadow::Player::CShadow*>(in_pThis);
 
-    auto* pStateGoc = in_pThis->GetStateGOC();
+    auto* pStateGoc = pThis->GetStateGOC();
     if (!pStateGoc)
         return;
 
-    auto* pVisualGoc = in_pThis->GetPlayerGOC<app::Player::CVisualGOC>();
+    auto* pVisualGoc = pThis->GetPlayerGOC<app::Player::CVisualGOC>();
     if (!pVisualGoc)
         return;
 
@@ -200,15 +202,15 @@ HOOK(void, __fastcall, UpdateHook, ASLR(0x00861CB0), slw_shadow::Player::CShadow
     const char* pVisualName = pVisualGoc->GetCurrentVisualName();
     int currentState = pStateGoc->GetCurrentState();
 
-    if (!in_pThis->GetJetOnStateNames().contains(pAnimationName) ||
+    if (!pThis->GetJetOnStateNames().contains(pAnimationName) ||
         currentState == 120 || currentState == 13 ||  currentState == 15 ||
         !strcmp(pVisualName, "VisualSuperSonic") || !strcmp(pVisualName, "CVisualSpin"))
     {
-        in_pThis->JetBoostersVisible(false);
+		pThis->JetBoostersVisible(false);
     }
     else
     {
-        in_pThis->JetBoostersVisible(true);
+		pThis->JetBoostersVisible(true);
     }
 }
 
