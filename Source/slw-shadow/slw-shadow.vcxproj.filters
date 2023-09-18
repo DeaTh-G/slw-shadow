@@ -13,83 +13,29 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Sonic2013">
-      <UniqueIdentifier>{cb9b6775-1aa4-498b-8541-bad1bc6960e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\System">
-      <UniqueIdentifier>{cab211b3-0bae-41d8-bed5-9acbe197c878}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\System\Player">
-      <UniqueIdentifier>{a89092ed-412d-409a-bdf7-18f52c031322}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Sonic2013">
+    <Filter Include="Source Files\Patches">
       <UniqueIdentifier>{3a9c60c6-9416-4db7-89ac-f80c5b708cb9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Sonic2013\System">
+    <Filter Include="Source Files\Patches\System">
       <UniqueIdentifier>{eae6aefe-4077-4220-89e0-0643903c605b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Sonic2013\System\Player">
+    <Filter Include="Source Files\Patches\System\Player">
       <UniqueIdentifier>{62a4c562-4c38-48f1-9749-92357f1c120b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Sonic2013\System\Effect">
-      <UniqueIdentifier>{44d14f74-6a4c-4a24-963e-341776f3b75b}</UniqueIdentifier>
+    <Filter Include="Source Files\Patches\xgame">
+      <UniqueIdentifier>{af5eb1f3-f2a2-44c8-88d4-474b81c58fd9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Sonic2013\Sonicteam">
-      <UniqueIdentifier>{10082b06-1a02-40bd-89b2-746f9dbd2e91}</UniqueIdentifier>
+    <Filter Include="Source Files\Patches\xgame\gamemode">
+      <UniqueIdentifier>{8ffcc17e-bf3b-41c6-88f1-207b6ca4a634}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Sonic2013\Sonicteam\math">
-      <UniqueIdentifier>{c69abf2c-2708-42bb-93d7-d7c198c8864b}</UniqueIdentifier>
+    <Filter Include="Source Files\Patches\xgame\gamemode\StartUp">
+      <UniqueIdentifier>{b0ea678e-e470-4d0a-92f3-1b59b11e8583}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Sonic2013\Sonicteam\math\math">
-      <UniqueIdentifier>{666e729a-2e3c-441a-acdc-bfcb8195e7a0}</UniqueIdentifier>
+    <Filter Include="Source Files\Patches\xgame\gamemode\WorldAreaMap">
+      <UniqueIdentifier>{0eca5d1c-fc25-4b2a-9bf9-50de45a30ffb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog">
-      <UniqueIdentifier>{6e68b5c1-3493-416d-af23-544f825b7618}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Game">
-      <UniqueIdentifier>{59ca876b-c6d8-418d-a0fd-b4ad21d45503}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Game\goc">
-      <UniqueIdentifier>{86160e7a-fa06-4e59-91a8-74a6119647bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Base">
-      <UniqueIdentifier>{b824ea76-bb1c-4817-adcf-a77e37318ac3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Base\System">
-      <UniqueIdentifier>{ad93f206-17dc-4ee4-9f03-41a7f2e9a720}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Universe">
-      <UniqueIdentifier>{7b974db6-f3f5-4f9d-96a4-67cd5da67dee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Sonicteam\Utility">
-      <UniqueIdentifier>{4741766d-3809-42e0-973b-0d82ddba97ba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Sonicteam\System">
-      <UniqueIdentifier>{f6367e8c-e2f2-4141-8d52-4fa4b5419a61}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\System\Utility">
-      <UniqueIdentifier>{3d55d083-0845-4010-9550-47ecdbbde776}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Animation">
-      <UniqueIdentifier>{b5c160f5-5590-4ce9-adc6-3399586d89c4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Animation\Resource">
-      <UniqueIdentifier>{a02b4217-e5f3-493a-8395-0e1aba5ba922}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Resource">
-      <UniqueIdentifier>{5b79fa3a-9bec-4ba6-a1cd-d8c54bcb0103}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\System\WorldMap">
-      <UniqueIdentifier>{9db0b0f1-64ef-45a9-be6b-dc714d0a2d57}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Sonic2013\System\WorldMap">
-      <UniqueIdentifier>{3d2297bb-3b36-48e7-bbb9-c39849f1592f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Sound">
-      <UniqueIdentifier>{11c5f61a-6422-403a-af3c-e48373c517a8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sonic2013\Hedgehog\Animation\Base">
-      <UniqueIdentifier>{f118d3f9-1a69-428b-be2e-84d3e3814b23}</UniqueIdentifier>
+    <Filter Include="Source Files\Patches\System\Player\Info">
+      <UniqueIdentifier>{aacf2f5b-9eaf-43a9-b578-c2645a106cad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -99,190 +45,67 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013.h">
+    <ClInclude Include="utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\System\Effect.h">
-      <Filter>Header Files\Sonic2013\System</Filter>
+    <ClInclude Include="slw-shadow.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player.h">
-      <Filter>Header Files\Sonic2013\System</Filter>
+    <ClInclude Include="Patches\xgame\gamemode\StartUp\GameModeStartUp.h">
+      <Filter>Source Files\Patches\xgame\gamemode\StartUp</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\VisualSonic.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
+    <ClInclude Include="Patches\xgame\gamemode\WorldAreaMap\WorldAreaMapInfo.h">
+      <Filter>Source Files\Patches\xgame\gamemode\WorldAreaMap</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\Sonic.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
+    <ClInclude Include="Patches\System\Player\VisualHuman.h">
+      <Filter>Source Files\Patches\System\Player</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\StateGOC.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
+    <ClInclude Include="Patches\System\Player\Shadow.h">
+      <Filter>Source Files\Patches\System\Player</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\System\Effect\EffectHandle.h">
-      <Filter>Header Files\Sonic2013\System\Effect</Filter>
+    <ClInclude Include="Patches\System\Player\Info\PlayerVisualShadowLancelotInfo.h">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\GOCCollectionImpl.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
+    <ClInclude Include="Patches\System\Player\Info\PlayerVisualAndroidShadowInfo.h">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\Sonicteam\math\math.h">
-      <Filter>Header Files\Sonic2013\Sonicteam\math\math</Filter>
+    <ClInclude Include="Patches\System\Player\Info\PlayerVehicleGliderInfo.h">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
     </ClInclude>
-    <ClInclude Include="Sonic2013\Sonicteam.h">
-      <Filter>Header Files\Sonic2013</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_VisualModel.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game\goc</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog.h">
-      <Filter>Header Files\Sonic2013</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Effect.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game\goc</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameObject.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhRefCountObject.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Base\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Universe\hhLeafActor.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Universe\hhActor.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Sonicteam\Utility\NonCopyable.h">
-      <Filter>Header Files\Sonic2013\Sonicteam\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Universe\hhMessage.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Sonicteam\System\IAllocator.h">
-      <Filter>Header Files\Sonic2013\Sonicteam\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameDocument.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\ObjInfo.h">
-      <Filter>Header Files\Sonic2013\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhReferencedObject.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Base\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhBaseObject.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Base\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\FileLoader.h">
-      <Filter>Header Files\Sonic2013\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Utility\ObjUtil.h">
-      <Filter>Header Files\Sonic2013\System\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\PlaneTornado.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\Resource\hhAnimationResContainer.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Animation\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameObject3D.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Transform.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game\goc</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\Player.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\PlayerVehicle.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\WorldMap\WorldMap.h">
-      <Filter>Header Files\Sonic2013\System\WorldMap</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\WorldMap.h">
-      <Filter>Header Files\Sonic2013\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\VisualGOC.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Resource\hhResourceReflections.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\Resource\hhCharAnimScript.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Animation\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\VisualHuman.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\hhCharactorAnimation.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\hhCharactorAnimationSingle.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\VisualBase.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Sound\hhSoundHandle.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhHandle.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Base\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Sound\hhSoundHandleObj.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Animation.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game\goc</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_AnimationScript.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game\goc</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_AnimationSingle.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game\goc</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\Base\hhAnimationCallback.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Animation\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Sound.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game\goc</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\System\Player\PlayerVisual.h">
-      <Filter>Header Files\Sonic2013\System\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameModeStartUp.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameMode.h">
-      <Filter>Header Files\Sonic2013\Hedgehog\Game</Filter>
+    <ClInclude Include="Patches\System\Player\Glider.h">
+      <Filter>Source Files\Patches\System\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sonic2013\System\Player\VisualSonic.cpp">
-      <Filter>Source Files\Sonic2013\System\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Sonic2013\System\Player\Sonic.cpp">
-      <Filter>Source Files\Sonic2013\System\Player</Filter>
-    </ClCompile>
     <ClCompile Include="Mod.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sonic2013\System\Player\PlaneTornado.cpp">
-      <Filter>Source Files\Sonic2013\System\Player</Filter>
+    <ClCompile Include="Patches\xgame\gamemode\StartUp\GameModeStartUp.cpp">
+      <Filter>Source Files\Patches\xgame\gamemode\StartUp</Filter>
     </ClCompile>
-    <ClCompile Include="Sonic2013\System\WorldMap\WorldMap.cpp">
-      <Filter>Source Files\Sonic2013\System\WorldMap</Filter>
+    <ClCompile Include="Patches\System\Player\Shadow.cpp">
+      <Filter>Source Files\Patches\System\Player</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Patches\System\Player\VisualHuman.cpp">
+      <Filter>Source Files\Patches\System\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Sonic2013\System\Player\VisualHuman.cpp">
-      <Filter>Source Files\Sonic2013\System\Player</Filter>
+    <ClCompile Include="Patches\System\Player\Glider.cpp">
+      <Filter>Source Files\Patches\System\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Sonic2013\Hedgehog\Game\GameModeStartUp.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Patches\xgame\gamemode\WorldAreaMap\WorldAreaMapInfo.cpp">
+      <Filter>Source Files\Patches\xgame\gamemode\WorldAreaMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Info\PlayerVisualShadowLancelotInfo.cpp">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Info\PlayerVisualAndroidShadowInfo.cpp">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches\System\Player\Info\PlayerVehicleGliderInfo.cpp">
+      <Filter>Source Files\Patches\System\Player\Info</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

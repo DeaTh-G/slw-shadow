@@ -9,14 +9,6 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -39,19 +31,6 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -63,12 +42,6 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -76,26 +49,19 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;SLWSHADOW_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\;$(ProjectDir);include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\..\Depends\LWAPI\Sonic2013;$(ProjectDir)..\..\..\Depends\INIReader;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>
       </Optimization>
-      <InlineFunctionExpansion>
-      </InlineFunctionExpansion>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -114,13 +80,13 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\;$(ProjectDir);include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\..\Depends\LWAPI\Sonic2013;$(ProjectDir)..\..\..\Depends\INIReader;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>MaxSpeed</Optimization>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <TreatSpecificWarningsAsErrors>
       </TreatSpecificWarningsAsErrors>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -133,111 +99,34 @@
       </LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;SLWSHADOW_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;SLWSHADOW_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Sonic2013.h" />
+    <ClInclude Include="Patches\System\Player\Glider.h" />
+    <ClInclude Include="Patches\System\Player\Info\PlayerVehicleGliderInfo.h" />
+    <ClInclude Include="Patches\System\Player\Info\PlayerVisualShadowLancelotInfo.h" />
+    <ClInclude Include="Patches\System\Player\Info\PlayerVisualAndroidShadowInfo.h" />
+    <ClInclude Include="Patches\System\Player\Shadow.h" />
+    <ClInclude Include="Patches\System\Player\VisualHuman.h" />
+    <ClInclude Include="Patches\xgame\gamemode\StartUp\GameModeStartUp.h" />
+    <ClInclude Include="Patches\xgame\gamemode\WorldAreaMap\WorldAreaMapInfo.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Sonic2013\Hedgehog.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\Base\hhAnimationCallback.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\hhCharactorAnimation.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\hhCharactorAnimationSingle.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\Resource\hhAnimationResContainer.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Animation\Resource\hhCharAnimScript.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhBaseObject.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhHandle.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhRefCountObject.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Base\System\hhReferencedObject.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameDocument.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameMode.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameModeStartUp.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameObject.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\GameObject3D.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Animation.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_AnimationScript.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_AnimationSingle.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Effect.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Sound.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_Transform.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Game\goc\goc_VisualModel.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Resource\hhResourceReflections.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Sound\hhSoundHandle.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Sound\hhSoundHandleObj.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Universe\hhActor.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Universe\hhLeafActor.h" />
-    <ClInclude Include="Sonic2013\Hedgehog\Universe\hhMessage.h" />
-    <ClInclude Include="Sonic2013\Sonicteam.h" />
-    <ClInclude Include="Sonic2013\Sonicteam\math\math.h" />
-    <ClInclude Include="Sonic2013\Sonicteam\System\IAllocator.h" />
-    <ClInclude Include="Sonic2013\Sonicteam\Utility\NonCopyable.h" />
-    <ClInclude Include="Sonic2013\System\Effect.h" />
-    <ClInclude Include="Sonic2013\System\Effect\EffectHandle.h" />
-    <ClInclude Include="Sonic2013\System\FileLoader.h" />
-    <ClInclude Include="Sonic2013\System\ObjInfo.h" />
-    <ClInclude Include="Sonic2013\System\Player.h" />
-    <ClInclude Include="Sonic2013\System\Player\GOCCollectionImpl.h" />
-    <ClInclude Include="Sonic2013\System\Player\PlaneTornado.h" />
-    <ClInclude Include="Sonic2013\System\Player\Player.h" />
-    <ClInclude Include="Sonic2013\System\Player\PlayerVehicle.h" />
-    <ClInclude Include="Sonic2013\System\Player\PlayerVisual.h" />
-    <ClInclude Include="Sonic2013\System\Player\VisualBase.h" />
-    <ClInclude Include="Sonic2013\System\Player\VisualHuman.h" />
-    <ClInclude Include="Sonic2013\System\Player\Sonic.h" />
-    <ClInclude Include="Sonic2013\System\Player\StateGOC.h" />
-    <ClInclude Include="Sonic2013\System\Player\VisualGOC.h" />
-    <ClInclude Include="Sonic2013\System\Player\VisualSonic.h" />
-    <ClInclude Include="Sonic2013\System\Utility\ObjUtil.h" />
-    <ClInclude Include="Sonic2013\System\WorldMap.h" />
-    <ClInclude Include="Sonic2013\System\WorldMap\WorldMap.h" />
+    <ClInclude Include="slw-shadow.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Mod.cpp" />
+    <ClCompile Include="Patches\System\Player\Info\PlayerVehicleGliderInfo.cpp" />
+    <ClCompile Include="Patches\System\Player\Info\PlayerVisualShadowLancelotInfo.cpp" />
+    <ClCompile Include="Patches\System\Player\Info\PlayerVisualAndroidShadowInfo.cpp" />
+    <ClCompile Include="Patches\System\Player\Glider.cpp" />
+    <ClCompile Include="Patches\System\Player\Shadow.cpp" />
+    <ClCompile Include="Patches\System\Player\VisualHuman.cpp" />
+    <ClCompile Include="Patches\xgame\gamemode\StartUp\GameModeStartUp.cpp" />
+    <ClCompile Include="Patches\xgame\gamemode\WorldAreaMap\WorldAreaMapInfo.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Sonic2013\Hedgehog\Game\GameModeStartUp.cpp" />
-    <ClCompile Include="Sonic2013\System\Player\PlaneTornado.cpp" />
-    <ClCompile Include="Sonic2013\System\Player\VisualHuman.cpp" />
-    <ClCompile Include="Sonic2013\System\Player\Sonic.cpp" />
-    <ClCompile Include="Sonic2013\System\Player\VisualSonic.cpp" />
-    <ClCompile Include="Sonic2013\System\WorldMap\WorldMap.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

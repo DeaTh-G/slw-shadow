@@ -9,9 +9,8 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "LostCodeLoader.h"
-#include "ModLoader.h"
-#include <Dependencies/Eigen/Geometry>
-#include "Sonic2013.h"
+#include "../../../Depends/LWAPI/Sonic2013/Sonic2013.h"
+#include "../../../Depends/INIReader/INIReader.h"
+#include "slw-shadow.h"
 
 #endif //PCH_H
