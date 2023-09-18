@@ -23,6 +23,9 @@ namespace slw_shadow::Player
 		bool IsAlternateSkateSound{};
 
 		const std::unordered_set<std::string_view> GetJetOnStateNames() const;
+		void CreateShadowJetBoosters();
+		void CreateLancelotJetBoosters();
+		void JetBoostersVisible(bool in_isEnable);
 
 		static void InstallPatches();
 		static void InstallHooks();
