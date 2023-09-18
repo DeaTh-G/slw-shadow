@@ -40,6 +40,9 @@ HOOK(void, __fastcall, AddCallbackHook, ASLR(0x008EB820), slw_shadow::Player::CG
 
 void slw_shadow::Player::CGlider::InstallPatches()
 {
+	// Expand allocation to reserve spaces for storing the Glider Boosters for the Glider
+	WRITE_MEMORY(ASLR(0x0085A95F), uint32_t, sizeof(slw_shadow::Player::CGlider));
+
     // Raise effect slots for CPlaneTornado from 1 to 3
     WRITE_MEMORY(ASLR(0x008EBCA7), byte, 0x03);
 
