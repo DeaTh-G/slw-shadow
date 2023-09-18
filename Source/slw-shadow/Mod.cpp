@@ -11,16 +11,16 @@ extern "C"
 		if (fileExists(dir + "Shadow.pac"))
 		{
 			// Replace Sonic.pac with Shadow.pac
-			WRITE_MEMORY(ASLR(0x00DDDD1C), const char*, "Shadow.pac");
+			WRITE_MEMORY(ASLR(0x00DDDD1C), char, "Shadow.pac");
 
 			// Replace Virtualsonic1p.pac with Shadow.pac
-			WRITE_MEMORY(ASLR(0x00E02D98), const char*, "Shadow.pac");
+			WRITE_MEMORY(ASLR(0x00E02D98), char, "Shadow.pac");
 
 			// Replace chr_virtualsonic_1p with chr_Sonic
-			WRITE_MEMORY(ASLR(0x00E02E04), const char*, "chr_Sonic");
+			WRITE_MEMORY(ASLR(0x00E02E04), char, "chr_Sonic");
 
 			// Repalce chr_sonic_spin_1p with chr_sonic_spin
-			WRITE_MEMORY(ASLR(0x00E02DDC), const char*, "chr_sonic_spin");
+			WRITE_MEMORY(ASLR(0x00E02DDC), char, "chr_sonic_spin");
 
 			// Negate the call of app::ObjUtil::GetModelResource(&v4, (int)"chr_virtualsonic_antenna", (int)&v5);
 			WRITE_NOP(ASLR(0x008F8C91), 5);
@@ -39,7 +39,7 @@ extern "C"
 		if (fileExists(dir + "Lancelot.pac"))
 		{
 			// Replace Linksonic.pac with Lancelot.pac
-			WRITE_MEMORY(ASLR(0x00E02C80), const char*, "Lancelot.pac");
+			WRITE_MEMORY(ASLR(0x00E02C80), char, "Lancelot.pac");
 			
 			slw_shadow::Player::ShadowLancelotInfo::InstallHooks();
 
@@ -50,7 +50,7 @@ extern "C"
 		if (fileExists(dir + "Rouge.pac"))
 		{
 			// Replace Tails.pac with Rouge.pac
-			WRITE_MEMORY(ASLR(0x00DDDCD0), const char*, "Rouge.pac");
+			WRITE_MEMORY(ASLR(0x00DDDCD0), char, "Rouge.pac");
 		}
 
 		if (fileExists(dir + "Glider.pac"))
@@ -64,12 +64,12 @@ extern "C"
 
 		// Replace Supersonic.pac with Supershadow.pac
 		if (fileExists(dir + "Supershadow.pac"))
-			WRITE_MEMORY(ASLR(0x00E02CA0), const char*, "Supershadow.pac");
+			WRITE_MEMORY(ASLR(0x00E02CA0), char, "Supershadow.pac");
 		
 		if (fileExists(dir + "Shadow2p.pac"))
 		{
 			// Replace Virtualsonic2p.pac with Shadow2p.pac
-			WRITE_MEMORY(ASLR(0x00E02D84), const char*, "Shadow2p.pac");
+			WRITE_MEMORY(ASLR(0x00E02D84), char, "Shadow2p.pac");
 			
 			slw_shadow::Player::AndroidShadowInfo::InstallHooks();
 		}
